@@ -58,3 +58,12 @@ window.addEventListener("click", function () {
 const greet = (greeting) => (mane) => console.log(`${greeting}, ${mane}`);
 
 greet("Good morning")("Tola");
+
+// FOR THE TUTORIAL PART
+const data = fetch(
+  "https://imdb-api.com/en/API/Search/k_lumgedar/inception%202010"
+)
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => console.log(data));
