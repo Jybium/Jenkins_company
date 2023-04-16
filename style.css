@@ -26,6 +26,7 @@ h2 {
   height: 60px;
   display: flex;
   align-items: center;
+  position: static;
   position: fixed;
   z-index: 6;
   justify-content: space-between;
@@ -130,14 +131,12 @@ h2 {
   align-items: center;
   color: dodgerblue;
   background-size: cover;
-  height: 90vh;
+  height: 75vh;
   background-image: url("/images/jasper-garratt-GCpIzvf5K38-unsplash.jpg");
   width: 100%;
   background-color: rgb(65, 64, 62);
-  background-size: 100%;
-  /* background-color: dodgerblue; */
   background-blend-mode: overlay;
-  background-position: center;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 .key-word {
@@ -175,15 +174,13 @@ footer button {
 .each-offer {
   display: flex;
   background-color: whitesmoke;
-  /* justify-content: space-between; */
   gap: 120px;
   width: 85%;
-  /* padding: 0 30px; */
   margin: 40px auto;
   align-items: center;
-  /* height: 100px; */
   text-align: left;
   color: dodgerblue;
+  overflow: hidden;
 }
 .reverse {
   flex-direction: row-reverse;
@@ -201,7 +198,7 @@ footer button {
   .each-offer img {
     width: 100%;
     height: 50%;
-    object-fit: contain;
+    object-fit: cover;
   }
   .each-offer-words {
     padding: 20px;
@@ -281,6 +278,7 @@ footer button {
 footer {
   margin-top: 50px;
   background-color: rgba(121, 121, 123, 0.231);
+  position: relative;
 }
 .foot {
   padding: 30px;
@@ -404,16 +402,19 @@ footer button {
 .search {
   display: flex;
   gap: 5px;
-  width: 70%;
-  margin: 20px auto;
-  position: sticky;
+  width: 100%;
+  margin: auto;
+  padding: 25px ;
+  position: fixed;
+  background-color: white;
+  z-index: 6;
 }
 .search input,
 .search button {
   padding: 2px 7px;
   border-radius: 10px;
   outline: none;
-  border: 0.3px solid black;
+  border: 0.3px solid dodgerblue;
 }
 .search input {
   width: 100%;
@@ -427,32 +428,66 @@ footer button {
   width: 90%;
   margin: auto;
   justify-content: space-between;
-  
   padding: 30px;
+  display: relative;
   /* height: max-content; */
 }
+article{
+  /* display: relative; */
+  height: 100%;
+}
 .video-card {
-  width: 28%;
+  width: 30%;
+  position: relative;
+  top: 80px;
   margin: 10px;
   padding: 10px;
+}
+.menu{
+  top: 100px;
+  position: relative;
 }
 .menu ul{
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin: auto;
+  overflow-x: auto;
+}
+.menu ul::-webkit-scrollbar{
+  display: none;
+}
+.menu h3{
+  width: 90%;
+  margin: auto auto 10px auto;
+  color: dodgerblue;
 }
 .menu ul li a{
   white-space: nowrap;
+  display: flex;
+  gap: 10px;
   padding: 6px 12px;
   border-radius: 10px;
   font-size: 13px;
   background-color: rgba(121, 121, 123, 0.231);
   color: dodgerblue;
   transition: 2s;
+  margin: 5px;
 }
 .menu ul li a:hover{
   color: white;
   cursor: pointer;
   background-color: dodgerblue;
+}
+@media screen and (max-width: 900px){
+  .menu ul{
+    flex-wrap: wrap;
+  }
+  .menu ul li a{
+    flex: 50%;
+    margin: 5px 0;
+  }
+  .video-card{
+    width: 50%;
+  }
 }

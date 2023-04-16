@@ -24,40 +24,33 @@ hamburger.onclick = function () {
 
 // FOR THE TYPING EFFECT
 
-let display = "STOP. SHOP. REPEAT.";
-let ded = document.getElementById("demo");
-let speed = 200;
-let i = 0;
+// let display = "STOP. SHOP. REPEAT.";
+// let ded = document.getElementById("demo");
+// let speed = 200;
+// let i = 0;
 
-// function dis() {
-//   if (i < display.length) {
-//     ded.innerHTML += display[i];
-//     i++;
-//     setTimeout(dis, speed);
-//   }
-// }
+//  function dis() {
+//     if (i < display.length) {
+//      ded.innerHTML+= display[i];
+//      i++;
+//      setTimeout(dis, speed);
+//    }
+//  }
 
-// dis();
-// let play = "Experience The Beauty Of Clicking Away Your Needs.";
-// let j = 0;
-// let demo = document.getElementById("dead");
-// let fast = 100;
+//  dis();
+//  let play = "Experience The Beauty Of Clicking Away Your Needs.";
+//  let j = 0;
+//  let demo = document.getElementById("dead");
+//  let fast = 100;
 // function news() {
-//   if (j < play.length) {
-//     demo.innerHTML += play[j];
-//     j++;
-//     setTimeout(news, fast);
-//   }
-// }
-// news();
+//    if (j < play.length) {
+//      demo.innerHTML += play[j];
+//      j++;
+//      setTimeout(news, fast);
+//    }
+//  }
+//  news();
 
-// window.addEventListener("click", function () {
-//   console.log("this is the window");
-// });
-
-// const greet = (greeting) => (mane) => console.log(`${greeting}, ${mane}`);
-
-// greet("Good morning")("Tola");
 
 // FOR THE SPINNER
 var myVar;
@@ -222,7 +215,6 @@ const video = (search) => {
         maxResults: 100,
         q: search ,
       })
-      
   )
     .then((res) => {
       console.log(data);
@@ -232,7 +224,9 @@ const video = (search) => {
       console.log(data)
       // const [...el] = data.items
       data.items.forEach(item => {
-        let eachvideo = `<div class="video-card"><iframe width='350' height='300' src='http://www.youtube.com/embed/${item.id.videoId}' frameborder='0' allowfullscreen></iframe><div/>`;
+        let eachvideo = `<div class="video-card">
+        <iframe width='350' height='300' src='http://www.youtube.com/embed/${item.id.videoId}' frameborder='0' allowfullscreen></iframe>
+        <div/>`;
         videoList.insertAdjacentHTML("afterbegin", eachvideo);
       });
     });
