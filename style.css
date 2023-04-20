@@ -89,18 +89,22 @@ h2 {
     margin: 3px 0;
   }
   .nav-bar {
-    /* display: none; */
-    height: 0px;
+    /*display: none;
+    */height: 0px;
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
-    width: 97.5vw;
+    width: 100vw;
     background: white;
     transition: 1s;
     background-color: rgba(148, 145, 145, 0.747);
     overflow: hidden;
-  }
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
   .nav-bar.active {
     height: 450px;
   }
@@ -114,7 +118,11 @@ h2 {
     text-align: center;
     transition: 0.5s;
     opacity: 0;
-  }
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
   .nav-bar ul li a {
     margin-bottom: 12px;
     color: rgba(249, 247, 247, 0.998);
@@ -131,7 +139,7 @@ h2 {
   align-items: center;
   color: dodgerblue;
   background-size: cover;
-  height: 75vh;
+  height: 80vh;
   background-image: url("/images/jasper-garratt-GCpIzvf5K38-unsplash.jpg");
   width: 100%;
   background-color: rgb(65, 64, 62);
@@ -391,103 +399,7 @@ footer button {
 }
 
 /* TUTORIAL PART */
-.body {
-  top: 60px;
-  position: relative;
-  width: 100%;
-  /* height: 100vw; */
-  margin: auto;
-  /* border-top: 1px solid dodgerblue; */
-}
-.search {
-  display: flex;
-  gap: 5px;
-  width: 100%;
-  margin: auto;
-  padding: 25px ;
-  position: fixed;
-  background-color: white;
-  z-index: 6;
-}
-.search input,
-.search button {
-  padding: 2px 7px;
-  border-radius: 10px;
-  outline: none;
-  border: 0.3px solid dodgerblue;
-}
-.search input {
-  width: 100%;
-  padding: 5px 20px;
-}
-
-/* FOR THE VIDEO CARDS */
-.video-list {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: auto;
-  justify-content: space-between;
-  padding: 30px;
-  display: relative;
-  /* height: max-content; */
-}
 article{
-  /* display: relative; */
-  height: 100%;
-}
-.video-card {
-  width: 30%;
-  position: relative;
   top: 80px;
-  margin: 10px;
-  padding: 10px;
-}
-.menu{
-  top: 100px;
-  position: relative;
-}
-.menu ul{
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin: auto;
-  overflow-x: auto;
-}
-.menu ul::-webkit-scrollbar{
-  display: none;
-}
-.menu h3{
-  width: 90%;
-  margin: auto auto 10px auto;
-  color: dodgerblue;
-}
-.menu ul li a{
-  white-space: nowrap;
-  display: flex;
-  gap: 10px;
-  padding: 6px 12px;
-  border-radius: 10px;
-  font-size: 13px;
-  background-color: rgba(121, 121, 123, 0.231);
-  color: dodgerblue;
-  transition: 2s;
-  margin: 5px;
-}
-.menu ul li a:hover{
-  color: white;
-  cursor: pointer;
-  background-color: dodgerblue;
-}
-@media screen and (max-width: 900px){
-  .menu ul{
-    flex-wrap: wrap;
-  }
-  .menu ul li a{
-    flex: 50%;
-    margin: 5px 0;
-  }
-  .video-card{
-    width: 50%;
-  }
+  /* position: relative; */
 }
