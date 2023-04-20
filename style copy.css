@@ -50,7 +50,7 @@
 
 .menu{
     width: 90%;
-    margin: 10px auto;
+    margin: 20px auto;
 
 }
 .menu h3{
@@ -87,7 +87,7 @@ article{
 .search {
     width: 80%;
     margin: 0px auto;
-    padding: 20px auto;
+    padding: 40px auto;
     display: flex;
     gap: 10px;
     /* justify-content: space-between; */
@@ -168,17 +168,17 @@ footer{
     display: flex;
     gap: 5px;
 }
+
 .video-card{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 20px auto;
-}
-.video-card iframe{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px auto;
+    place-items: center;
     width: 100%;
 }
-
+iframe{
+    margin: 10px;
+}
 /* MEDIA QUERIES */
 @media  screen and (max-width:900px) {
     .foot, .foot ul, .feet{
@@ -268,5 +268,9 @@ footer{
       }
       h1 {
         font-size: 25px;
+      }
+      .video-card{
+        display: block;
+        text-align: center;
       }
 }

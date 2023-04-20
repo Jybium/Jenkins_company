@@ -23,7 +23,7 @@ hamburger.onclick = function () {
 };
 
 // FOR THE TYPING EFFECT
-
+// let stopShopRepeat = document.querySelector('')
 
 
 // FOR THE SPINNER
