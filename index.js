@@ -81,7 +81,7 @@ const video = (search) => {
 
 button.addEventListener('click', () =>
 {
-  const search = document.getElementById('search').value;
+  let search = document.getElementById('search').value;
   console.log(search)
   video(search);
   search = " "
