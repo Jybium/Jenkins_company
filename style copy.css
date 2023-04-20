@@ -50,7 +50,7 @@
 
 .menu{
     width: 90%;
-    margin: 10px auto;
+    margin: 10px auto ;
 
 }
 .menu h3{
@@ -111,6 +111,41 @@ article{
     -ms-border-radius:10px;
     -o-border-radius:10px;
 }
+/* LOADER */
+#loader {
+    position: absolute;
+    /* display: none; */
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border-radius: 100%;
+    border: 20px solid #f3f3f3;
+    border-top: 16px solid dodgerblue;
+    border-bottom: 16px solid darkblue;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 0.5s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #spin {
+    width: 100%;
+    display: none;
+    height: 100vh;
+    /* position: absolute; */
+    margin: auto;
+    /* position: fixed; */
+    z-index: 2;
+    background-color: #f3f3f3;
+  }
 footer{
     background-color: whitesmoke;
     padding: 30px;
@@ -197,6 +232,7 @@ iframe{
     .menu ul{
         flex-wrap: wrap;
         width: 100%;
+        padding: 10px 0;
     }
     .menu ul li a{
         margin: 10px 0;

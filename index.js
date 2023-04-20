@@ -51,6 +51,9 @@ let channelhttp = "https://www.googleapis.com/youtube/v3/channels?";
 
 
 const video = (search) => {
+
+  document.getElementById("spin").style.display = "block";
+  document.getElementById("show").style.display = "none";
   const data = fetch(
     queryLink +
       new URLSearchParams({
@@ -63,6 +66,8 @@ const video = (search) => {
   )
     .then((res) => {
       console.log(data);
+      document.getElementById("spin").style.display = "none";
+  document.getElementById("show").style.display = "block";
       return res.json();
     })
     .then((data) => {
