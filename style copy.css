@@ -50,7 +50,7 @@
 
 .menu{
     width: 90%;
-    margin: 20px auto;
+    margin: 10px auto;
 
 }
 .menu h3{
@@ -68,7 +68,6 @@
     color: dodgerblue;
     border-radius: 10px;
     width: 25%;
-    /* margin: 5px; */
     font-size: 14px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -87,10 +86,9 @@ article{
 .search {
     width: 80%;
     margin: 0px auto;
-    padding: 40px auto;
+    padding-top: 12px;
     display: flex;
     gap: 10px;
-    /* justify-content: space-between; */
 }
 .search input{
     width: 80%;
