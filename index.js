@@ -48,12 +48,11 @@ let queryLink = "https://www.googleapis.com/youtube/v3/search?";
 let channelhttp = "https://www.googleapis.com/youtube/v3/channels?";
 
 
+const prop = pop.forEach((el) => el.textContent);
+
 
 
 const video = (search) => {
-
-  document.getElementById("spin").style.display = "block";
-  document.getElementById("show").style.display = "none";
   const data = fetch(
     queryLink +
       new URLSearchParams({
@@ -65,9 +64,7 @@ const video = (search) => {
       })
   )
     .then((res) => {
-      console.log(data);
-      document.getElementById("spin").style.display = "none";
-  document.getElementById("show").style.display = "block";
+      console.log(res);
       return res.json();
     })
     .then((data) => {
@@ -87,4 +84,5 @@ button.addEventListener('click', () =>
   const search = document.getElementById('search').value;
   console.log(search)
   video(search);
+  search = " "
 })
