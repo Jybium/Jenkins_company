@@ -35,36 +35,38 @@ function showPage() {
   document.getElementById("spin").style.display = "none";
   document.getElementById("show").style.display = "block";
 }
+// 
 // FOR THE TUTORIAL PART
 const spin = document.getElementById("spin");
 const show = document.getElementById("show");
 const videoList = document.querySelector(".video-card");
 const search = document.getElementById("search");
 const button = document.querySelector("#btn");
-const pop = document.querySelectorAll(".list");
+const [... pop] = document.querySelectorAll(".list");
 let api_key = "AIzaSyDBKYHEqw1rwW7C7hRaQ0EAszBmsop6Pyc";
 let videohttp = "https://www.googleapis.com/youtube/v3/videos?";
 let queryLink = "https://www.googleapis.com/youtube/v3/search?";
 let channelhttp = "https://www.googleapis.com/youtube/v3/channels?";
 
 
-const prop = pop.forEach((el) => el.textContent);
-
-
+const onclick = function (pop){ pop.map(el => el.addEventListener('click', () => {let text = el.textContent; console.log(text); return text}))}
+console.log(onclick(pop))
 
 const video = (search) => {
+  // closePage()
   const data = fetch(
     queryLink +
-      new URLSearchParams({
+    new URLSearchParams({
         key: api_key,
         type: "videos",
         part: "snippet",
-        maxResults: 100,
+        maxResults: 1000,
         q: search ,
       })
   )
     .then((res) => {
       console.log(res);
+      // showPage()
       return res.json();
     })
     .then((data) => {
@@ -77,12 +79,17 @@ const video = (search) => {
         videoList.insertAdjacentHTML('beforeend', eachvideo);
       });
     });
+    search = document.getElementById('search').value = " ";
 };
 
-button.addEventListener('click', () =>
+button.addEventListener('click', (e) =>
 {
   let search = document.getElementById('search').value;
-  console.log(search)
+  button.style.backgroundColor = 'dodgerblue'
   video(search);
-  search = " "
+})
+search.addEventListener('keypress', (e) => {
+  let search = document.getElementById('search').value;
+  // console.log(e)
+  if(e.key === 'Enter') {video(search)}
 })
