@@ -27,14 +27,7 @@ hamburger.onclick = function () {
 
 
 // FOR THE SPINNER
-var myVar;
-function myFunction() {
-  myVar = setTimeout(showPage, 2000);
-}
-function showPage() {
-  document.getElementById("spin").style.display = "none";
-  document.getElementById("show").style.display = "block";
-}
+document.querySelector('.lds-ring').style.display = 'none'
 // 
 // FOR THE TUTORIAL PART
 const spin = document.getElementById("spin");
@@ -43,34 +36,35 @@ const videoList = document.querySelector(".video-card");
 const search = document.getElementById("search");
 const button = document.querySelector("#btn");
 const [... pop] = document.querySelectorAll(".list");
-let api_key = "AIzaSyDBKYHEqw1rwW7C7hRaQ0EAszBmsop6Pyc";
+const errorCan = document.querySelector('.errorCan')
+let api_key = "AIzaSyCv5xnjDSLOc5u_xlpvwipdwRrwxzROTsU";
 let videohttp = "https://www.googleapis.com/youtube/v3/videos?";
 let queryLink = "https://www.googleapis.com/youtube/v3/search?";
 let channelhttp = "https://www.googleapis.com/youtube/v3/channels?";
 
 
-const onclick = function (pop){ pop.map(el => el.addEventListener('click', () => {let text = el.textContent; console.log(text); return text}))}
-console.log(onclick(pop))
+// const onclick = function (pop){ pop.map(el => el.addEventListener('click', () => {let text = el.textContent; console.log(text); return text}))}
+// console.log(onclick(pop))
 
 const video = (search) => {
-  // closePage()
+  document.querySelector('.lds-ring').style.display = 'grid'
   const data = fetch(
     queryLink +
     new URLSearchParams({
-        key: api_key,
-        type: "videos",
-        part: "snippet",
-        maxResults: 1000,
-        q: search ,
-      })
-  )
+      key: api_key,
+      type: "videos",
+      part: "snippet",
+      maxResults: 1000,
+      q: search ,
+    })
+    )
     .then((res) => {
       console.log(res);
-      // showPage()
       return res.json();
     })
     .then((data) => {
       console.log(data)
+      document.querySelector('.lds-ring').style.display = 'none'
       // const [...el] = data.items
       data.items.forEach(item => {
         let eachvideo = `
@@ -78,10 +72,14 @@ const video = (search) => {
         `;
         videoList.insertAdjacentHTML('beforeend', eachvideo);
       });
-    });
+    }).catch((err)  => {console.error(err)
+      const insert = `<p class="error"> Error Loading Video: ${err.msg}</p>`
+      errorCan.insertAdjacentHTML('afterbegin', insert)
+    })
     search = document.getElementById('search').value = " ";
-};
-
+    
+    // errorCan.remove('')
+  };
 button.addEventListener('click', (e) =>
 {
   let search = document.getElementById('search').value;

@@ -119,23 +119,37 @@ article{
     -o-border-radius:10px;
 }
 /* LOADER */
-#loader {
-    position: absolute;
-    /* display: none; */
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    width: 120px;
-    height: 120px;
-    margin: -76px 0 0 -76px;
-    border-radius: 100%;
-    border: 20px solid #f3f3f3;
-    border-top: 16px solid dodgerblue;
-    border-bottom: 16px solid darkblue;
-    -webkit-animation: spin 1s linear infinite;
-    animation: spin 0.5s linear infinite;
+.lds-ring {
+    display: grid;
+    text-align: center;
+    place-content: center;
+    place-items: center;
+    position: relative;
+    width: 100%;
+    height: 50vh;
   }
-  @keyframes spin {
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid dodgerblue;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: dodgerblue transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
     0% {
       transform: rotate(0deg);
     }
@@ -143,21 +157,11 @@ article{
       transform: rotate(360deg);
     }
   }
-  #spin {
-    width: 100%;
-    display: none;
-    height: 100vh;
-    position: absolute;
-    margin: auto;
-    /* position: fixed; */
-    z-index: 10;
-    background-color: #f3f3f3;
-  }
 footer{
     background-color: whitesmoke;
     padding: 30px;
     position: relative;
-    white-space: nowrap;
+    
 }
 .foot, .feet{
     display: flex;
@@ -171,7 +175,7 @@ footer{
     display: flex;
 }
 .foot ul li a{
-    margin: 10px;
+    margin: 7px;
     padding: 6px 12px;
     font-size: 13px;
     color: dodgerblue;
@@ -214,11 +218,19 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 30px auto;
+    padding: 10px 0;
     place-items: center;
     width: 100%;
 }
 iframe{
     margin: 10px;
+}
+.error{
+    display: grid;
+    text-align: center;
+    padding: 30px;
+    font-size: large;
+
 }
 /* MEDIA QUERIES */
 @media  screen and (max-width:900px) {
@@ -315,5 +327,8 @@ iframe{
       .video-card{
         display: block;
         text-align: center;
+      }
+      .lds-ring{
+        height: 50vh;
       }
 }
