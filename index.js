@@ -63,7 +63,7 @@ const video = (search) => {
     })
     .then((data) => {
       document.querySelector('.lds-ring').style.display = 'none'
-      videoList.style.display = "grid"
+      videoList.style.display = "block"
       data.items.forEach(item => {
         let eachvideo = `
         <iframe width='350' height='300' src='http://www.youtube.com/embed/${item.id.videoId}' frameborder='0' allowfullscreen></iframe>
