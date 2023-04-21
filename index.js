@@ -63,6 +63,7 @@ const video = (search) => {
     })
     .then((data) => {
       document.querySelector('.lds-ring').style.display = 'none'
+      videoList.style.display = "grid"
       data.items.forEach(item => {
         let eachvideo = `
         <iframe width='350' height='300' src='http://www.youtube.com/embed/${item.id.videoId}' frameborder='0' allowfullscreen></iframe>
@@ -83,8 +84,9 @@ const video = (search) => {
     let search = document.getElementById('search').value;
     button.style.backgroundColor = 'dodgerblue'
     video(search);
-})
-search.addEventListener('keypress', (e) => {
+  })
+  search.addEventListener('keypress', (e) => {
+  videoList.style.display = 'none'
   let search = document.getElementById('search').value;
   if(e.key === 'Enter') {video(search)}
 })
