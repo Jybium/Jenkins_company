@@ -1,137 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  box-sizing: border-box;
-}
-h1 {
-  font-size: 40px;
-  word-spacing: 20px;
-  letter-spacing: 7px;
-  margin-bottom: 5px;
-  transition: 3s;
-}
-h2 {
-  letter-spacing: 4px;
-}
-.new {
-  background-color: darkblue;
-}
-.header {
-  background-color: white;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  position: static;
-  position: fixed;
-  z-index: 6;
-  justify-content: space-between;
-  padding: 0 100px;
-}
-.logo {
-  display: flex;
-  align-items: end;
-}
-.logo p {
-  color: dodgerblue;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-weight: 900;
-}
-.hamburger {
-  display: none;
-}
-.nav-bar ul,
-.foot ul {
-  display: flex;
-  white-space: nowrap;
-}
-.nav-bar ul li a,
-.foot ul li a {
-  display: block;
-  color: dodgerblue;
-  font-size: 13px;
-  padding: 6px 14px;
-  border-radius: 50px;
-  margin: 0 5px;
-}
-.nav-bar ul li a:hover,
-.active,
-.foot ul li a:hover {
-  color: white;
-  background: dodgerblue;
-  transition: 1s;
-}
-
-@media only screen and (max-width: 1320px) {
-  .header {
-    padding: 0 50px;
-  }
-}
-@media only screen and (max-width: 1100px) {
-  .header {
-    padding: 0 30px;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .hamburger {
-    display: block;
-    cursor: pointer;
-  }
-  .hamburger .line {
-    width: 30px;
-    height: 3px;
-    background: dodgerblue;
-    margin: 3px 0;
-  }
-  .nav-bar {
-    /*display: none;
-    */height: 0px;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    background: white;
-    transition: 1s;
-    background-color: rgba(148, 145, 145, 0.747);
-    overflow: hidden;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
-}
-  .nav-bar.active {
-    height: 450px;
-  }
-  .nav-bar.active ul {
-    opacity: 1;
-  }
-  .nav-bar ul {
-    display: block;
-    width: fit-content;
-    margin: 80px auto 0 auto;
-    text-align: center;
-    transition: 0.5s;
-    opacity: 0;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-}
-  .nav-bar ul li a {
-    margin-bottom: 12px;
-    color: rgba(249, 247, 247, 0.998);
-  }
-  h1 {
-    font-size: 25px;
-  }
-}
-
 /* CALL TO ACTION PART */
 .new {
   display: flex;
@@ -282,42 +148,7 @@ footer button {
   transition-delay: 0.9s;
 }
 
-/* FOOTER SECTION */
-footer {
-  margin-top: 50px;
-  background-color: rgba(121, 121, 123, 0.231);
-  position: relative;
-}
-.foot {
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-}
 
-footer input,
-footer button {
-  outline: none;
-  border: none;
-  padding: 5px 10px;
-  margin: 0;
-  border-radius: 5px;
-}
-.foot ul {
-  display: flex;
-  justify-content: space-between;
-}
-.foot ul li a {
-  color: dodgerblue;
-  flex: 50%;
-}
-.feet {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-.socials img {
-  width: 35px;
-}
 
 /* MEDIA QUERY */
 
@@ -328,9 +159,7 @@ footer button {
   .links {
     margin: 20px 0;
   }
-  .foot {
-    display: block;
-  }
+  
   .form {
     display: block;
   }
@@ -353,50 +182,13 @@ footer button {
     font-size: 16px;
     font-weight: 700;
   }
-  .feet {
-    display: block;
-  }
+  
   .socials img {
     margin-top: 20px;
     width: 35px;
   }
 }
 
-/* FOR THE LOADER */
-#loader {
-  position: absolute;
-  /* display: none; */
-  left: 50%;
-  top: 50%;
-  z-index: 1;
-  width: 120px;
-  height: 120px;
-  margin: -76px 0 0 -76px;
-  border-radius: 100%;
-  border: 20px solid #f3f3f3;
-  border-top: 16px solid dodgerblue;
-  border-bottom: 16px solid darkblue;
-  -webkit-animation: spin 1s linear infinite;
-  animation: spin 0.5s linear infinite;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-#spin {
-  width: 100%;
-  display: none;
-  height: 100vh;
-  /* position: absolute; */
-  margin: auto;
-  /* position: fixed; */
-  z-index: 2;
-  background-color: #f3f3f3;
-}
 
 /* TUTORIAL PART */
 article{

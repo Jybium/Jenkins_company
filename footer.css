@@ -1,0 +1,173 @@
+footer{
+    background-color: whitesmoke;
+    padding: 30px;
+    position: relative;
+    
+}
+.foot, .feet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.feet{
+    padding-top: 40px;
+}
+.foot ul{
+    display: flex;
+}
+.foot ul li a{
+    /* margin: 7px; */
+    padding: 6px 12px;
+    font-size: 13px;
+    width: max-content;
+    color: dodgerblue;
+}
+.foot ul li a:hover{
+    color: whitesmoke;
+    background-color: dodgerblue;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+.foot input, .foot button{
+    padding: 5px 10px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.foot button{
+    background-color: dodgerblue;
+    color: whitesmoke;
+}
+.feet p{
+    font-size: 14px;
+}
+.feet img{
+    width: 35px;
+}
+.copy{
+    display: flex;
+    gap: 5px;
+}
+
+
+
+
+/* MEDIA QUERY */
+@media  screen and (max-width:900px) {
+    .foot, .foot ul, .feet{
+        display: block;
+        
+    }
+    .foot ul li {
+        padding: 5px 20px;
+    }
+    .foot ul{
+        padding: 10px 0;
+    }
+    .socials{
+        padding-top: 10px;
+    }
+    .socials img{
+        width: 30px;
+    }
+    .menu ul{
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .menu ul li a{
+        margin: 10px 5px;
+
+        padding: 3px 15px;
+        flex: 50%;
+    }
+    .menu li{
+        margin: 5px 0;
+    }
+    .video-card{
+        display: block;
+    }
+    .header ul{
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+      }
+      .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: dodgerblue;
+        margin: 3px 0;
+      }
+      .nav-bar {
+        height: 0px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: white;
+        transition: 1s;
+        background-color: rgba(148, 145, 145, 0.747);
+        overflow: hidden;
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        -ms-transition: 1s;
+        -o-transition: 1s;
+    }
+      .nav-bar.active {
+        height: 450px;
+      }
+      .nav-bar.active ul {
+        opacity: 1;
+      }
+      .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+      .nav-bar ul li {
+        margin-bottom: 12px;
+        color: rgba(249, 247, 247, 0.998);
+      }
+      .nav-bar ul li a:hover{
+        color: rgba(249, 247, 247, 0.998)
+      }
+      h1 {
+        font-size: 25px;
+      }
+      .video-card{
+        display: block;
+        text-align: center;
+      }
+      .lds-ring{
+        height: 50vh;
+      }
+}
+@media  screen and (max-width: 500px){
+    .foot ul{
+        padding: 0;
+        margin: 5px auto;
+    }
+    .foot ul li a{
+        padding: 4px 20px;
+        margin: 0;
+        width: max-content;
+    }
+}

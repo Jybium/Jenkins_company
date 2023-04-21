@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 1px .5px 1px .5px whitesmoke;
+    border: 1px solid whitesmoke;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: fixed;
+    z-index: 6;
+    background-color: white;
+    /* align-items: center; */
+}
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar ul li a{
+    color: dodgerblue;
+    font-size: 13px;
+    margin: 7px;
+    padding: 5px 15px;
+}
+.nav-bar ul li a:hover{
+    color: whitesmoke;
+    background-color: dodgerblue;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.logo a{
+    display: flex;
+}
+.add{
+    display: flex;
+    align-self: flex-end;
+    color: dodgerblue;
+    font-weight: 500;
+}
+
+.menu{
+    width: 70%;
+    margin: 10px auto ;
+
+}
+.menu ul::-webkit-scrollbar{
+    display: none;
+}
+.menu h3{
+    color: dodgerblue;
+}
+.menu ul{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 20px 0;
+    overflow: auto;
+}
+.menu ul li a{
+    padding: 5px 10px;
+    color: dodgerblue;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    width: 25%;
+    margin: 5px;
+    font-size: 13px;
+    white-space: nowrap;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.menu ul li a:hover{
+    color: whitesmoke;
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+article{
+    top: 60px;
+    position: relative;
+}
+.search {
+    width: 70%;
+    margin: 0px auto;
+    padding-top: 12px;
+    display: flex;
+    text-align: center;
+    gap: 10px;
+}
+.search input{
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid dodgerblue;
+    outline: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.search button{
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid dodgerblue;
+    padding: 5px 10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+}
+
+
+.video-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px auto;
+    padding: 10px 0;
+    place-items: center;
+    width: 100%;
+}
+iframe{
+    margin: 10px;
+}
+.error{
+    display: grid;
+    text-align: center;
+    padding: 30px;
+    font-size: large;
+
+}
+/* MEDIA QUERIES */
