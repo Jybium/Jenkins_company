@@ -86,6 +86,5 @@ const video = (search) => {
 })
 search.addEventListener('keypress', (e) => {
   let search = document.getElementById('search').value;
-  // console.log(e)
   if(e.key === 'Enter') {video(search)}
 })
