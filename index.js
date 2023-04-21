@@ -59,32 +59,30 @@ const video = (search) => {
     })
     )
     .then((res) => {
-      console.log(res);
       return res.json();
     })
     .then((data) => {
-      console.log(data)
       document.querySelector('.lds-ring').style.display = 'none'
-      // const [...el] = data.items
       data.items.forEach(item => {
         let eachvideo = `
         <iframe width='350' height='300' src='http://www.youtube.com/embed/${item.id.videoId}' frameborder='0' allowfullscreen></iframe>
         `;
         videoList.insertAdjacentHTML('beforeend', eachvideo);
       });
-    }).catch((err)  => {console.error(err)
-      const insert = `<p class="error"> Error Loading Video: ${err.msg}</p>`
-      errorCan.insertAdjacentHTML('afterbegin', insert)
     })
+    // .catch((err)  => {console.error(err)
+    //   const insert = `<p class="error"> Error Loading Video: ${err.msg}</p>`
+    //   errorCan.insertAdjacentHTML('afterbegin', insert)
+    // })
     search = document.getElementById('search').value = " ";
     
-    // errorCan.remove('')
   };
-button.addEventListener('click', (e) =>
-{
-  let search = document.getElementById('search').value;
-  button.style.backgroundColor = 'dodgerblue'
-  video(search);
+  button.addEventListener('click', (e) =>
+  {
+    videoList.style.display = 'none'
+    let search = document.getElementById('search').value;
+    button.style.backgroundColor = 'dodgerblue'
+    video(search);
 })
 search.addEventListener('keypress', (e) => {
   let search = document.getElementById('search').value;
