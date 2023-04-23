@@ -1,13 +1,130 @@
-.banner{
-    height: 100vh;
-    background-image: url('/images/Ticket section/gilles-lambert-pb_lF8VWaPU-unsplash.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
+.body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.banner h1{
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: dodgerblue;
-    font-size: 24px;
-    transition-duration: 3s;
+    background-size: cover;
+    height: 100vh;
+    background-image: url("/images/Ticket section/gilles-lambert-pb_lF8VWaPU-unsplash.jpg");
+    width: 100%;
+    background-color: rgb(65, 64, 62);
+    background-blend-mode: overlay;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    animation-name: CTA;
+    animation-duration: 20s;
+    transition-delay: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: CTA;
+}
+  .CTA {
+    width: 90%;
+    margin: auto;
+}
+  .CTA h1{
+      font-size: 40px;
+      transition-delay: 5s;
+      word-spacing: 0px;
+      font-weight: 700;
+      -webkit-transition: 5s;
+      -moz-transition: 5s;
+      -ms-transition: 5s;
+      -o-transition: 5s;
+}
+    .CTA p{
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: large;
+    }
+    .CTA button{
+        padding: 10px 50px;
+        border-radius: 15px;
+        border: none;
+        margin-top: 40px;
+        background-color: rgb(33, 33, 77);
+        transition: 1s;
+        color: white;
+    }
+    .CTA button:hover{
+        background-color: dodgerblue;
+        color: rgb(85, 82, 82);
+    }
+    .CTA button a{
+        color: whitesmoke;
+        font-size: 15px;
+    }
+    
+    /* FOR THE MAIN SECTION */
+    .main{
+        color: gray;
+        width: 80%;
+        margin: auto;
+    }
+    .general{
+        text-align: center;
+    }
+    .categories{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 40px auto;
+    }
+    .category{
+        text-align: center;
+        margin: 5px;
+    }
+    .category img{
+        width: 50%;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+}
+.fashion img{
+    width: 60%;
+}
+
+    /* MEDIA QUERY */
+    @media screen and (max-width: 900px) {
+        .CTA h1{
+            font-size: 30px;
+            word-spacing: 0px;
+        }
+        .CTA{
+        text-align: center;
+        }
+        .categories{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 40px auto;
+        }
+        .general h2{
+            font-size: 18px;
+        }
+}
+@media screen and (max-width:400px) {
+    .categories{
+        display: block;
+        /* grid-template-columns: repeat(1, 1fr); */
+        margin: 40px auto;
+    }
+    .general h2{
+        font-size: 18px;
+    }
+}
+
+/*  */
+/* ANIMATION */
+@keyframes CTA {
+    0%{background-image: url('/images/Ticket section/gilles-lambert-pb_lF8VWaPU-unsplash.jpg');}
+    20%{background-image: url('/images/Ticket section/brooke-lark-YwSy97_Rk1o-unsplash.jpg');}
+    40%{background-image: url('/images/Ticket section/susan-g-komen-3-day-qfWMUXDcN18-unsplash.jpg');}
+    60%{background-image: url('/images/Ticket section/headway-F2KRf_QfCqw-unsplash.jpg');}
+    80%{background-image: url('/images/Ticket section/pablo-heimplatz-ZODcBkEohk8-unsplash.jpg')}
+    100%{background-image: url('/images/Ticket section/towfiqu-barbhuiya-bwOAixLG0uc-unsplash.jpg');}
 }

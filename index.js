@@ -39,7 +39,7 @@ hamburger.onclick = function () {
 
 // FOR ACTIVE LINK
 let [... links] = document.querySelectorAll('.link')
-links.map(el => el.addEventListener('click', ()=> el.toggle('.active')))
+links.forEach(el => el.addEventListener('click', ()=> {console.log(el);el.classList.toggle('.active');}))
 
 // FOR THE SPINNER
 // document.querySelector('.lds-ring').style.display = 'none'
