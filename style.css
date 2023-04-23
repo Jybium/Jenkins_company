@@ -34,6 +34,10 @@ footer button {
   transition: 1s;
   color: white;
 }
+
+.nav-bar ul li a:active{
+  background-color: dodgerblue;
+}
 .key-word button:hover,
 .start button:hover,
 footer button {

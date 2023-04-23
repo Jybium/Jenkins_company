@@ -37,9 +37,12 @@ hamburger.onclick = function () {
 // }
 // ssr()
 
+// FOR ACTIVE LINK
+let [... links] = document.querySelectorAll('.link')
+links.map(el => el.addEventListener('click', ()=> el.toggle('.active')))
 
 // FOR THE SPINNER
-document.querySelector('.lds-ring').style.display = 'none'
+// document.querySelector('.lds-ring').style.display = 'none'
 // 
 // FOR THE TUTORIAL PART
 const spin = document.getElementById("spin");
