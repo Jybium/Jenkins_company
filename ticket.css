@@ -1,0 +1,10 @@
+.banner{
+    height: 100vh;
+    background-image: url('/images/Ticket section/gilles-lambert-pb_lF8VWaPU-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner h1{
+    
+}

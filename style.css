@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* CALL TO ACTION PART */
 .new {
   display: flex;
@@ -5,7 +10,7 @@
   align-items: center;
   color: dodgerblue;
   background-size: cover;
-  height: 80vh;
+  height: 100vh;
   background-image: url("/images/jasper-garratt-GCpIzvf5K38-unsplash.jpg");
   width: 100%;
   background-color: rgb(65, 64, 62);
@@ -45,46 +50,54 @@ footer button {
   margin-top: 20px;
   /* background-color: whitesmoke; */
 }
-.each-offer {
+/* Each Offer */
+.each-offer{
   display: flex;
+  width: 80%;
+  height: max-content;
+  border-radius: 15px;
+  margin: 20px auto;
   background-color: whitesmoke;
-  gap: 120px;
-  width: 85%;
-  margin: 40px auto;
-  align-items: center;
-  text-align: left;
-  color: dodgerblue;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
   overflow: hidden;
-}
-.reverse {
-  flex-direction: row-reverse;
-  padding-left: 20px;
-  /* text-align: center; */
-}
-@media screen and (max-width: 900px) {
-  .each-offer {
-    display: block;
-    overflow: hidden;
-    padding: 0;
-    border-radius: 10px;
-    box-shadow: 9px 2px 2px 2px whitesmoke;
-  }
-  .each-offer img {
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-  }
-  .each-offer-words {
-    padding: 20px;
-  }
-}
-.each-offer h3 {
-  margin-bottom: 10px;
-}
-.each-offer img {
-  width: 450px;
-  height: 230px;
   object-fit: cover;
+}
+.each-offer-image{
+  width: 100%;
+  height: max-content;
+  object-fit: cover;
+}
+.each-offer-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.each-offer-words{
+  margin: 5px 20px;
+  padding: 10px;
+}
+@media screen and (min-width:900px) {
+  .each-offer-image{
+    width: 500px;
+    height: 200px;
+    margin: auto;
+  }
+  .each-offer{
+    display: flex;
+    align-items: center;
+  }
+  .each-offer-words{
+    width: 50%;
+  }
+  .reverse{
+    flex-direction: row-reverse;
+  }
+}
+.each-offer-words h3{
+  margin: 10px 0;
 }
 .each-offer button {
   color: rgba(245, 245, 245, 0.811);
@@ -92,6 +105,12 @@ footer button {
   padding: 10px 14px;
   background-color: dodgerblue;
   cursor: pointer;
+}
+.each-offer button a{
+  color: rgba(245, 245, 245, 0.811);
+}
+.each-offer button a:hover{
+  color: rgb(202, 199, 199);
 }
 .each-offer button:hover {
   background-color: rgba(3, 3, 61, 0.991);
@@ -167,6 +186,9 @@ footer button {
   .trust div {
     flex: 100%;
     padding: 10px;
+  }
+  .each-offer{
+    display: block;
   }
   .start {
     padding: 30px;

@@ -23,7 +23,19 @@ hamburger.onclick = function () {
 };
 
 // FOR THE TYPING EFFECT
-// let stopShopRepeat = document.querySelector('')
+
+// let stopShopRepeat = document.querySelector('#repeat')
+// let stopShopRepeatWord = "STOP. SHOP. REPEAT."
+// let speed = 200
+// let i = 0
+// function ssr (){
+//   for(i=0; i<stopShopRepeatWord.length; i++){
+//     stopShopRepeat.innerHTML+= stopShopRepeatWord
+//     [i]
+//   }
+//   setTimeout(speed, ssr())
+// }
+// ssr()
 
 
 // FOR THE SPINNER
@@ -46,6 +58,7 @@ let channelhttp = "https://www.googleapis.com/youtube/v3/channels?";
 
 const video = (search) => {
   document.querySelector('.lds-ring').style.display = 'grid'
+  errorCan.remove('p')
   console.log(search)
   const data = fetch(
     queryLink +
@@ -75,13 +88,13 @@ const video = (search) => {
       const insert = `<p class="error"> Error Loading Video: ${err.msg}</p>`
       errorCan.insertAdjacentHTML('afterbegin', insert)
     })
-    // search = document.getElementById('search').value = " ";
-    errorCan.remove('p')
+    search = document.getElementById('search').value = " ";
   };
   button.addEventListener('click', (e) =>
   {
     e.preventDefault;
     videoList.style.display = 'none'
+    videoList.innerHTML = " ";
     let search = document.getElementById('search').value;
     console.log(search)
     button.style.backgroundColor = 'dodgerblue'
@@ -90,12 +103,15 @@ const video = (search) => {
   search.addEventListener('keypress', (e) => {
     e.preventDefault;
     videoList.style.display = 'none'
-  let search = document.getElementById('search').value;
-  if(e.key === 'Enter') {console.log(search);video(search)}
+    let search = document.getElementById('search').value;
+    if(e.key === 'Enter') {
+      console.log(search);
+      video(search);
+    }
 })
 pop.map(el => el.addEventListener('click', (e) => {
   e.preventDefault;
   let text = el.textContent; 
-  console.log(text); 
-  video(text)
+  videoList.style.display = 'none'
+  video(text);
 }))

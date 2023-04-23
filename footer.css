@@ -65,9 +65,14 @@ footer{
         display: block;
         
     }
+    .foot ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
     .foot ul li {
         padding: 5px 20px;
     }
+
     .foot ul{
         padding: 10px 0;
     }
@@ -163,7 +168,7 @@ footer{
 @media  screen and (max-width: 500px){
     .foot ul{
         padding: 0;
-        margin: 5px auto;
+        margin: 2px auto;
     }
     .foot ul li a{
         padding: 4px 20px;
@@ -171,3 +176,10 @@ footer{
         width: max-content;
     }
 }
+
+/* @media screen and (max-width: 1300px){
+    .foot ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+} */
